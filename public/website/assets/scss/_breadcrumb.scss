@@ -1,0 +1,44 @@
+/*----------------------------------------*/
+/*  17. Breadcrumb
+/*----------------------------------------*/
+.breadcrumb{
+    &-height{
+        height: 270px;
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            font-weight: 700;
+        }
+        ul{
+            display: flex;
+            li{
+                position: relative;
+                &:not(:last-child){
+                    &:after {
+                        content: '\f105';
+                        font-family: FontAwesome;
+                        vertical-align: middle;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+        &.different-font-size{
+            h1{
+                @media (max-width: 479px){
+                    font-size: 20px;
+                }
+            }
+            ul{
+                li{
+                    @media (max-width: 479px){
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,682 @@
+/*----------------------------------------*/
+/*  01. Template default CSS
+/*----------------------------------------*/
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+/*-- Common Style --*/
+html {
+	scroll-behavior: smooth;
+}
+html,
+body {
+    height: 100%;
+}
+a{
+    color: $secondary;
+    text-decoration: none;
+    &:hover {
+        color: $primary;
+    }
+}
+a, 
+button, 
+img, 
+input {
+    transition: $baseTransition;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+button,
+button:focus,
+.btn,
+.btn:focus,
+input,
+input:focus,
+select,
+textarea,
+.swiper-pagination-bullet,
+.swiper-slide,
+.append-button,
+.swiper-button-next,
+.swiper-button-prev {
+	text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+.btn{
+    &:hover{
+        background-color: $primary;
+        border-color: $primary;
+    }
+    &-radius{
+        border-radius: 0 15px 0 15px;
+    }
+}
+h1, h2, h3, h4, h5, h6{
+    color: $secondary;
+    font-weight: 600;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img {
+	max-width: 100%;
+}
+.img-full {
+	width: 100%;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: center center;
+}
+::selection{
+    background-color: $primary;
+    color: $white;
+}
+
+/* ---Section Space--- */
+
+/* --Padding Top-- */
+.pt-120{
+    padding-top: 120px;
+    @include media-breakpoint-down(xl){
+        padding-top: 100px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-top: 80px;
+    }
+    @include media-breakpoint-down(md){
+        padding-top: 60px;
+    }
+}
+.pt-115{
+    padding-top: 115px;
+    @include media-breakpoint-down(xl){
+        padding-top: 95px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-top: 75px;
+    }
+    @include media-breakpoint-down(md){
+        padding-top: 55px;
+    }
+}
+.pt-110{
+    padding-top: 110px;
+    @include media-breakpoint-down(xl){
+        padding-top: 90px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-top: 70px;
+    }
+    @include media-breakpoint-down(md){
+        padding-top: 50px;
+    }
+}
+.pt-105{
+    padding-top: 105px;
+    @include media-breakpoint-down(xl){
+        padding-top: 85px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-top: 65px;
+    }
+    @include media-breakpoint-down(md){
+        padding-top: 45px;
+    }
+}
+.pt-100{
+    padding-top: 100px;
+    @include media-breakpoint-down(xl){
+        padding-top: 80px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-top: 60px;
+    }
+    @include media-breakpoint-down(md){
+        padding-top: 40px;
+    }
+}
+.pt-95{
+    padding-top: 95px;
+    @include media-breakpoint-down(xl){
+        padding-top: 75px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-top: 55px;
+    }
+    @include media-breakpoint-down(md){
+        padding-top: 35px;
+    }
+}
+/* --End Here-- */
+
+/* --Padding Bottom-- */
+.pb-120{
+    padding-bottom: 120px;
+    @include media-breakpoint-down(xl){
+        padding-bottom: 100px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-bottom: 80px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 60px;
+    }
+}
+.pb-115{
+    padding-bottom: 115px;
+    @include media-breakpoint-down(xl){
+        padding-bottom: 95px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-bottom: 75px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 55px;
+    }
+}
+.pb-110{
+    padding-bottom: 110px;
+    @include media-breakpoint-down(xl){
+        padding-bottom: 90px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-bottom: 70px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 50px;
+    }
+}
+.pb-105{
+    padding-bottom: 105px;
+    @include media-breakpoint-down(xl){
+        padding-bottom: 85px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-bottom: 65px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 45px;
+    }
+}
+.pb-100{
+    padding-bottom: 100px;
+    @include media-breakpoint-down(xl){
+        padding-bottom: 80px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 40px;
+    }
+}
+.pb-95{
+    padding-bottom: 95px;
+    @include media-breakpoint-down(xl){
+        padding-bottom: 75px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-bottom: 55px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 35px;
+    }
+}
+/* --End Here-- */
+
+/* --Padding Y Axis-- */
+.py-120{
+    padding: 120px 0;
+    @include media-breakpoint-down(xl){
+        padding: 100px 0;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 80px 0;
+    }
+    @include media-breakpoint-down(md){
+        padding: 60px 0;
+    }
+}
+.py-115{
+    padding: 115px 0;
+    @include media-breakpoint-down(xl){
+        padding: 95px 0;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 75px 0;
+    }
+    @include media-breakpoint-down(md){
+        padding: 55px 0;
+    }
+}
+.py-110{
+    padding: 110px 0;
+    @include media-breakpoint-down(xl){
+        padding: 90px 0;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 70px 0;
+    }
+    @include media-breakpoint-down(md){
+        padding: 50px 0;
+    }
+}
+.py-105{
+    padding: 105px 0;
+    @include media-breakpoint-down(xl){
+        padding: 85px 0;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 65px 0;
+    }
+    @include media-breakpoint-down(md){
+        padding: 45px 0;
+    }
+}
+.py-100{
+    padding: 100px 0;
+    @include media-breakpoint-down(xl){
+        padding: 80px 0;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 60px 0;
+    }
+    @include media-breakpoint-down(md){
+        padding: 40px 0;
+    }
+}
+.py-95{
+    padding: 95px 0;
+    @include media-breakpoint-down(xl){
+        padding: 75px 0;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 55px 0;
+    }
+    @include media-breakpoint-down(md){
+        padding: 35px 0;
+    }
+}
+/* --End Here-- */
+
+/* --Padding X Axis-- */
+.px-120{
+    padding: 0 120px;
+    @include media-breakpoint-down(xl){
+        padding: 0 100px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 0 80px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0 60px;
+    }
+}
+.px-115{
+    padding: 0 115px;
+    @include media-breakpoint-down(xl){
+        padding: 0 95px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 0 75px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0 55px;
+    }
+}
+.px-110{
+    padding: 0 110px;
+    @include media-breakpoint-down(xl){
+        padding: 0 90px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 0 70px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0 50px;
+    }
+}
+.px-105{
+    padding: 0 105px;
+    @include media-breakpoint-down(xl){
+        padding: 0 85px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 0 65px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0 45px;
+    }
+}
+.px-100{
+    padding: 0 100px;
+    @include media-breakpoint-down(xl){
+        padding: 0 80px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 0 60px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0 40px;
+    }
+}
+.px-95{
+    padding: 0 95px;
+    @include media-breakpoint-down(xl){
+        padding: 0 75px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 0 55px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0 35px;
+    }
+}
+/* --End Here-- */
+
+.pb-xs-0{
+    @media (max-width: 575px){
+        padding-bottom: 0 !important;
+    }
+}
+
+/* ---Data Background Image--- */
+[data-bg-image]:not(.bg-pattern) {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+/* ---Text Color--- */
+.text-white{
+    *{
+        color: $white;
+    }
+}
+.text-light-grey{
+    *{
+        color: #ccc;
+    }
+}
+.text-nero{
+    *{
+        color: #222;
+    }
+}
+.text-primary{
+    *{
+        color: $primary;
+    }
+}
+.text-secondary{
+    *{
+        color: $secondary;
+    }
+}
+.text-funfact{
+    *{
+        color: rgba(250, 188, 61, 0.9);
+    }
+}
+
+/* ---Section Title--- */
+.section-title{
+    .heading{
+        position: relative;
+        font-size: 32px;
+        &:before{
+            background-color: $secondary;
+            width: 50px;
+            height: 1px;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    p{
+        &.short-desc{
+            max-width: 45%;
+            margin: 0 auto;
+        }
+    }
+    &.style-02{
+        justify-content: center;
+        .heading{
+            &:before{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+/* ---Social Link--- */
+.social-link{
+    display: flex;
+    li{
+        &:not(:last-child){
+            padding-right: 25px;
+        }
+    }
+}
+
+/* ---Hover Direction--- */
+.hover-direction {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: bottom;
+    }
+    figcaption {
+        background: rgba(0, 0, 0, .5);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        pointer-events: none;
+        .inner-content{
+            padding: 25px;
+            position: absolute;
+            bottom: 0;
+            pointer-events: all;
+            span{
+                &.category{
+                    padding-bottom: 15px;
+                    display: block;
+                }
+            }
+            .title{
+                color: $white;
+            }
+            .btn-zoom{
+                border: 1px solid $white;
+                border-radius: 100%;
+                display: block;
+
+                &:hover{
+                    background-color: $white;
+                    border-color: $white;
+                    color: $primary;
+                    transition: $baseTransition;
+                }
+                i{
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &.derection-center{
+        figcaption{
+            justify-content: center;
+        }
+    }
+}
+
+/* ---Consion Button--- */
+.btn{
+    &-primary{
+        color: $white;
+    }
+    &-white-hover{
+        color: $white;
+        &:hover{
+            background-color: $light;
+            border-color: $light;
+            color: $secondary;
+        }
+    }
+    &-dark-hover{
+        &:hover{
+            background-color: $secondary;
+            border-color: $secondary;
+            color: $white;
+        }
+    }
+}
+/* ---Pagination--- */
+.pagination{
+    li{
+        .page-link{
+            color: inherit;
+            @include media-breakpoint-down(sm){
+                padding: 12px 14px;
+            }
+            &:focus{
+                border-color: none;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+/* ---Blockquote--- */
+blockquote{
+    border: 0;
+    border-left: 5px solid $primary;
+    background-color: #f1f2f3;
+    text-align: center;
+    padding: 40px;
+    @media (max-width: 479px){
+        padding: 15px;
+    }
+    p{
+        width: 580px;
+        font-size: 18px;
+        margin: 0 auto 0;
+        @include media-breakpoint-down(xl){
+            width: 100%;
+        }
+    }
+    .user-name{
+        position: relative;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 500;
+        &:before{
+            border-top: 1px solid;
+            width: 30px;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        &:after{
+            border-top: 1px solid;
+            width: 30px;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    }
+}
+
+/* ---Global Overlay--- */
+.global-overlay {
+	background-color: rgba(0,0,0,.5);
+	transition: $baseTransition;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	visibility: hidden;
+	&.overlay-open {
+		visibility: visible;
+		cursor: pointer;
+	}
+}
+
+/* ---Video Wrap--- */
+.video-wrap{
+    height: 640px;
+}
+
+/*-- Scroll To Top --*/
+.scroll-to-top{
+    background-color: $secondary;
+    border-radius: 0 15px 0 15px;
+    color: $white;
+    position: fixed;
+    right: 50px;
+    bottom: 90px;
+    z-index: 999;
+    overflow: hidden;
+    display: block;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	animation:  fadeOutDown 1s normal;
+    @include transition(all 300ms ease);
+    &:hover{
+        background-color: $primary;
+    }
+	&.show{
+		opacity: 1;
+		visibility: visible;
+		animation: fadeInUp 1s normal;
+	}
+	i{
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+		transition: $baseTransition;
+		color: $white;
+		display: inline-block;
+	}
+}

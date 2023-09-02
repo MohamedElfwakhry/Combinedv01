@@ -1,0 +1,84 @@
+/*----------------------------------------*/
+/*  09. Project
+/*----------------------------------------*/
+
+/* ---Masonary--- */
+.masonary{
+    &-custom-col{
+        flex: 0 0 auto;
+        width: 20%;
+    }
+    &-menu{
+        button{
+            background-color: transparent;
+            padding: 0;
+            border: 0;
+            .filter-text{
+                display: block;
+                font-size: 18px;
+                color: #858585;
+            }
+            &:not(:last-child){
+                padding-right: 25px;
+            }
+            &.is-checked{
+                .filter-text{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+/* ---Project Details--- */
+.project{
+    &-detail{
+        &-content{
+            padding-left: 30px;
+            position: sticky;
+            top: 140px;
+            @include media-breakpoint-down(lg){
+                padding-left: 0;
+            }
+            @include media-breakpoint-down(md){
+                padding-top: 20px;
+            }
+            .title{
+                font-size: 36px;
+            }
+            .project-desc{
+                color: $secondary;
+                font-weight: 500;
+            }
+        }
+        &-list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 62px 30px;
+            @include media-breakpoint-down(xl){
+                grid-gap: 37px 30px;
+            }
+            @media (max-width: 479px){
+                grid-template-columns: none;
+            }
+            .detail-list{
+                .label-field{
+                    text-transform: uppercase;
+                    color: $secondary;
+                    font-weight: 600;
+                    display: block;
+                }
+            }
+        }
+    }
+    &-link-share{
+        position: relative;
+        padding-top: 20px;
+        li{
+            display: inline-block;
+            &:not(:last-child){
+                padding-right: 25px;
+            }
+        }
+    }
+}

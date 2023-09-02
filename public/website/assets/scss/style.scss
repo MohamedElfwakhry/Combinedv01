@@ -1,0 +1,61 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Template Name
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    01. Template default CSS
+    02. Header
+    03. Slider
+    04. Navigation
+    05. Offcanvas
+    06. Animation
+    07. Intro
+    08. Brand
+    09. Project
+    10. Team
+    11. Service
+    12. Testimonial
+    13. Footer
+    14. Blog
+    15. Counter
+    16. Breadcrumb
+    17. About
+    18. Newsletter
+    19. Funfact
+    20. Sidebar
+    21. Contact
+    22. Banner
+
+-----------------------------------------------------------------------------------*/
+@import "./bootstrap/functions";
+@import "variabls";
+@import "custom-variables";
+@import "./bootstrap/bootstrap";
+
+@import "common";
+@import 'header';
+@import 'slider';
+@import 'navigation';
+@import 'offcanvas';
+@import 'animation';
+@import 'intro';
+@import 'brand';
+@import 'project';
+@import 'team';
+@import 'service';
+@import 'testimonial';
+@import 'footer';
+@import 'blog';
+@import 'counter';
+@import 'breadcrumb';
+@import 'about';
+@import 'newsletter';
+@import 'funfact';
+@import 'sidebar';
+@import 'contact';
+@import 'banner';

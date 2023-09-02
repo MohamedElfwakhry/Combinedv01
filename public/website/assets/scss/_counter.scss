@@ -1,0 +1,13 @@
+/*----------------------------------------*/
+/*  16. Counter
+/*----------------------------------------*/
+.counter{
+    &-icon{
+        font-size: 40px;
+        color: $primary;
+    }
+    &-title{
+        color: $black;
+        font-weight: 600;
+    }
+}

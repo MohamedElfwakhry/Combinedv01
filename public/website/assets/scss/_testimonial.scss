@@ -1,0 +1,43 @@
+/*----------------------------------------*/
+/*  12. Testimonial
+/*----------------------------------------*/
+.testimonial{
+    &-bg-height{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    &-quote{
+        padding-bottom: 30px;
+        display: block;
+        i{
+            font-size: 32px;
+        }
+    }
+    &-content{
+        max-width: 1024px;
+        margin: auto;
+        text-align: center;
+        @include media-breakpoint-down(xl){
+            max-width: 100%;
+            width: calc(100% - 80px);
+        }
+        @media (max-width: 479px) {
+            width: calc(100% - 30px);
+        }
+        .user-img{
+            img{
+                border-radius: 100%;
+            }
+        }
+        .user-name{
+            font-size: 24px;
+        }
+        .short-desc{
+            font-style: italic;
+            font-size: 24px;
+            @media (max-width: 479px) {
+                font-size: 19px;
+            }
+        }
+    }
+}

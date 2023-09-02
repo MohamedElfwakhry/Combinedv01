@@ -1,0 +1,69 @@
+/*----------------------------------------*/
+/*  22. Contact
+/*----------------------------------------*/
+.contact{
+    &-title{
+        font-size: 38px;
+    }
+    &-desc{
+        max-width: 70%;
+        margin: 0 auto;
+        @include media-breakpoint-down(md){
+            max-width: 100%;
+        }
+    }
+    &-form{
+        .group-form-field{
+            display: flex;
+            @include media-breakpoint-down(sm){
+                flex-direction: column;
+            }
+        }
+        .form-field{
+            width: 100%;
+            .label-field{
+                color: $secondary;
+                display: block;
+            }
+            .input-field,
+            .textarea-field{
+                border: 1px solid $border-color;
+                width: 100%;
+                height: 55px;
+                padding: 14px 16px;
+            }
+            .textarea-field{
+                height: 190px;
+            }
+        }
+    }
+}
+
+/* ---Contact Information--- */
+.contact-info{
+    .contact-info-title{
+        font-size: 18px;
+    }
+    > ul{
+        > li{
+            &.address{
+                display: flex;
+                i{
+                    margin-top: 5px;
+                    width: 25px;
+                }
+                span{
+                    width: calc(85% - 25px);
+                }
+            }
+        }
+    }
+}
+
+/* ---Google Map--- */
+.map{
+    &-size{
+        width: 100%;
+        height: 400px;
+    }
+}

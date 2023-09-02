@@ -1,0 +1,73 @@
+/*----------------------------------------*/
+/*  20. Funfact
+/*----------------------------------------*/
+.funfact{
+    &-bg-height{
+        height: 371px;
+    }
+    &-banner{
+        position: relative;
+        .inner-content{
+            position: relative;
+            z-index: 1;
+        }
+        .sub-title{
+            font-size: 32px;
+            font-weight: 600;
+            strong{
+                font-size: 48px;
+            }
+        }
+        .title{
+            font-size: 32px;
+            font-weight: 600;
+            @include media-breakpoint-down(sm){
+                font-size: 28px;
+            }
+        }
+        .contact-number{
+            font-size: 50px;
+            font-weight: 700;
+            @include media-breakpoint-down(sm){
+                font-size: 40px;
+            }
+        }
+    }
+    &-item{
+        flex-basis: 25%;
+        text-align: center;
+        font-weight: 700;
+        z-index: 1;
+        @include media-breakpoint-down(sm){
+            flex-basis: 50%;
+            padding-bottom: 20px;
+        }
+        &:not(:last-child){
+            border-right: 1px solid $secondary;
+            @include media-breakpoint-down(sm){
+                border: 0;
+            }
+        }
+        .count{
+            font-weight: 700;
+            font-size: 40px;
+        }
+        .counter-title{
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+    }
+    &-bg{
+        position: relative;
+        background-position: center;
+    }
+    &-inner{
+        background-repeat: repeat-x;
+        background-position: bottom;
+        background-size: auto;
+        display: flex;
+        @include media-breakpoint-down(sm){
+            flex-wrap: wrap;
+        }
+    }
+}

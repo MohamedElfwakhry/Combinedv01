@@ -1,0 +1,98 @@
+/*----------------------------------------*/
+/*  21. Sidebar
+/*----------------------------------------*/
+.sidebar{
+    &-title{
+        font-size: 20px;
+    }
+    &-title-2{
+        font-size: 30px;
+    }
+    &-widget-item{
+        .searchbox{
+            &-form{
+                position: relative;
+            }
+            &-input{
+                background-color: transparent;
+                border: 1px solid $border-color;
+                height: 40px;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 45px;
+            }
+            &-btn{
+                background-color: transparent;
+                border: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 40px;
+                line-height: 40px;
+                padding: 0;
+                width: 40px;
+            }
+        }
+    }
+    &-list_item{
+        li{
+            &:not(:last-child){
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+            img{
+                width: 25px;
+                height: 25px;
+                margin-right: 15px;
+            }
+            a{
+                color: #858585;
+                i{
+                    margin-right: 10px;
+                    font-size: 25px;
+                    vertical-align: middle;
+                }
+                &:hover{
+                    color: initial;
+                }
+            }
+        }
+    }
+    &-list{
+        &-product{
+            display: flex;
+        }
+        &-content{
+            width: calc(100% - 80px);
+            padding-left: 20px;
+            align-self: flex-start;
+            .title{
+                font-size: 16px;
+                line-height: 1.4;
+            }
+            .post-meta{
+                display: flex;
+                li{
+                    color: $secondary;
+                    &:not(:last-child)::after {
+                        margin: 0 5px;
+                        content: "/";
+                    }
+                }
+            }
+        }
+    }
+    &-tags{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            padding: 5px;
+            a{
+                border: 1px solid $border-color;
+                padding: 3px 15px;
+                display: block;
+            }
+        }
+    }
+}

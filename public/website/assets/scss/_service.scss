@@ -1,0 +1,103 @@
+/*----------------------------------------*/
+/*  11. Service
+/*----------------------------------------*/
+.service{
+    &-space{
+        padding-bottom: 50px;
+    }
+    &-item{
+        padding-bottom: 60px;
+        border-radius: 5px;
+        background: $white;
+        transition: $baseTransition;
+        &:hover{
+            .service{
+                &-add-action{
+                    left: 0;
+                }
+            }
+        }
+    }
+    &-img{
+        position: relative;
+        overflow: hidden;
+        display: block;
+    }
+    &-content{
+        .short-desc{
+            max-width: 85%;
+        }
+    }
+    &-add-action{
+        transition: $baseTransition;
+        position: absolute;
+        bottom: 0;
+        left: -80px;
+        .service{
+            &-icon{
+                background-color: $secondary;
+                padding: 15px;
+                * {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+    &-form{
+        input{
+            &.input-field{
+                border: 1px solid $border-color;
+                background-color: $white;
+                height: 45px;
+                padding: 10px 15px;
+                width: 100%;
+            }
+        }
+        textarea{
+            &.textarea-field{
+                border: 1px solid $border-color;
+                background-color: $white;
+                height: 140px;
+                padding: 10px 15px;
+                width: 100%;
+            }
+        }
+    }
+    &-form_wrap{
+        background: #f6f6f6 url(../images/service/inner-bg/1.png) no-repeat right bottom;
+        border: 1px solid #ddd;
+        padding: 70px 30px 40px;
+    }
+    &-list_wrap{
+        .list-title{
+            font-size: 24px;
+        }
+        .short-desc{
+            &.different-width{
+                max-width: 75%;
+            }
+        }
+    }
+}
+.style-02{
+    display: flex;
+    &[class*="service-item"]{
+        &:not(:last-child){
+            border-bottom: 1px solid $border-color;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+    }
+    .service{
+        &-img{
+            max-width: 110px;
+            flex-basis: 110px;
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+        &-content{
+            max-width: calc(100% - 110px);
+            flex-basis: calc(100% - 110px);
+        }
+    }
+}

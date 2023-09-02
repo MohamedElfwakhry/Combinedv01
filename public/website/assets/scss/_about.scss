@@ -1,0 +1,21 @@
+/*----------------------------------------*/
+/*  18. About
+/*----------------------------------------*/
+.about{
+    &-content{
+        @include media-breakpoint-down(lg){
+            padding-top: 20px;
+        }
+        .sub-title{
+            color: $secondary;
+            font-size: 24px;
+        }
+        .title{
+            font-size: 32px;
+            max-width: 85%;
+        }
+        .short-desc{
+            max-width: 80%;
+        }
+    }
+}

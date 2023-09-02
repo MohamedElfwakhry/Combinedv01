@@ -1,0 +1,65 @@
+/*----------------------------------------*/
+/*  13. Footer
+/*----------------------------------------*/
+.widget{
+    &-item{
+        @include media-breakpoint-down(lg){
+            padding-bottom: 40px;
+        }
+        .heading{
+            font-size: 20px;
+        }
+    }
+    &-list-item{
+        &.specific-item{
+            @include media-breakpoint-up(lg){
+                padding-top: 40px;
+            }
+        }
+        li{
+            &:not(:last-child){
+                padding-bottom: 10px;
+            }
+            i{
+                margin-right: 5px;
+            }
+            &:hover{
+                a{
+                    color: $white;
+                    i{
+                        color: inherit;
+                    }
+                }
+            }
+        }
+        &.with-hover_color{
+            li{
+                i{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+/* ---Fotter Bottom--- */
+.footer{
+    &-bottom{
+        .copyright,
+        .payment-method{
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+        }
+        .copyright{
+            @include media-breakpoint-down(sm){
+                padding-bottom: 20px;
+            }
+        }
+        .payment-method{
+            @include media-breakpoint-up(sm){
+                text-align: right;
+            }
+        }
+    }
+}

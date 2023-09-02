@@ -1,0 +1,113 @@
+/*----------------------------------------*/
+/*  07. Intro
+/*----------------------------------------*/
+.intro{
+    &-img{
+        &-info{
+            @include media-breakpoint-down(md){
+                padding-top: 40px;
+            }
+            span,
+            h3{
+                color: $primary;
+            }
+            span{
+                font-size: 18px;
+                letter-spacing: 2px;
+                display: block;
+            }
+            h3{
+                font-weight: 700;
+                font-size: 50px;
+            }
+        }
+        &.style-02{
+            position: relative;
+            padding-bottom: 125px;
+            @media (max-width: 479px){
+                flex-direction: column;
+                padding-bottom: 0;
+            }
+            .secondary-img{
+                position: relative;
+                top: 120px;
+                right: 50px;
+                @media (max-width: 479px){
+                    padding-top: 30px;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &-content{
+        @include media-breakpoint-down(xl){
+            padding-top: 40px;
+        }
+        .sub-title{
+            color: $primary;
+            font-size: 18px;
+            text-transform: capitalize;
+            display: block;
+            padding-bottom: 10px;
+        }
+        .intro-title{
+            font-weight: 700;
+            font-size: 45px;
+            @include media-breakpoint-down(xl){
+                font-size: 35px;
+            }
+        }
+        .intro-icon-wrap{
+            display: flex;
+            @media (max-width: 479px){
+                flex-direction: column;
+                [class*="single-item"]{
+                    &:not(:last-child){
+                        padding-bottom: 25px;
+                    }
+                }
+            }
+            .single-item{
+                display: flex;
+                align-items: center;
+                .icon{
+                    height: 55px;
+                    width: 55px;
+                }
+                .single-content{
+                    padding-left: 20px;
+                    width: calc(100% - 75px);
+                    h5{
+                        font-size: 18px;
+                        line-height: 1.4;
+                        @include media-breakpoint-down(xl){
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-feature-item{
+        display: flex;
+    }
+    &-feature-icon{
+        flex-basis: 60px;
+    }
+    &-feature-content{
+        flex-basis: calc(100% - 60px);
+        margin-left: 15px;
+        .title{
+            font-size: 24px;
+        }
+        p{
+            &.short-desc{
+                max-width: 405px;
+            }
+        }
+    }
+    &-box_shadow{
+        box-shadow: -3px 0 51.84px 2.16px rgba(0, 0, 0, 0.42);
+    }
+}

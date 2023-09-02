@@ -1,0 +1,142 @@
+/*----------------------------------------*/
+/*  04. Navigation
+/*----------------------------------------*/
+.nav-pagination_wrap{
+	.swiper-button-next,
+	.swiper-button-prev{
+		@include media-breakpoint-down(md){
+			display: none;
+		}
+	}
+	.swiper-pagination{
+		display: none;
+		@include media-breakpoint-down(md){
+			display: block;
+		}
+	}
+}
+/* ---Swiper Circle Arrow--- */
+.circle-arrow{
+	.swiper-button-next,
+	.swiper-button-prev{
+		background-color: transparent;
+		border: 1px solid $primary;
+		border-radius: 100%;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		opacity: 0;
+        visibility: hidden;
+        transition: $baseTransition;
+		&:after{
+			font-size: 16px;
+		}
+		&:hover{
+			background-color: $white;
+			border-color: $white;
+			color: $black;
+		}
+    }
+	&:hover{
+		.swiper-button-next,
+		.swiper-button-prev{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&.arrow-radius{
+		.swiper-button-next,
+		.swiper-button-prev{
+			border-radius: 0 15px 0 15px;
+		}
+	}
+}
+.append-button_wrap{
+	display: flex;
+	z-index: 1;
+	.append-button{
+		background-color: $white;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		transition: $baseTransition;
+		&:hover{
+			background-color: $primary;
+			color: $white;
+		}
+		i{
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+}
+/* ---With Background--- */
+.with-bg_white{
+	.swiper-button-next,
+	.swiper-button-prev{
+		background-color: $white;
+		border: 0;
+		color: inherit;
+		&:hover{
+			background-color: $primary;
+			color: $white;
+		}
+	}
+}
+ /* ---With BG Color--- */
+ .dark-arrow{
+	background-color: $white;
+	padding-left: 30px;
+	.append-button{
+		background-color: $black;
+		color: $white;
+		&:hover{
+			background-color: $primary;
+		}
+	}
+ }
+ .whisper-arrow{
+	.append-button{
+		background-color: #eee;
+		&:hover{
+			background-color: $primary;
+		}
+	}
+ }
+
+ /* ---Arrow Color--- */
+ .white-arrow{
+	.swiper-button-next,
+	.swiper-button-prev{
+		color: $white;
+		&:after{
+			font-size: 25px;
+		}
+	}
+ }
+
+/* ---Pagination--- */
+.swiper-pagination{
+	&.with-bg{
+		.swiper-pagination-bullet{
+			background-color: #eee;
+			opacity: 1;
+			&-active{
+				background-color: $primary;
+			}
+		}
+	}
+	.swiper-pagination-bullet-active{
+		background-color: $primary;
+	}
+	&.with-position_relative{
+		position: relative;
+		padding-top: 20px;
+		bottom: 0;
+	}
+	&.left-side{
+		display: inline-block;
+		width: auto;
+		left: 0;
+	}
+}
