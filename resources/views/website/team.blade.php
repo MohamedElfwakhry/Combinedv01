@@ -89,7 +89,7 @@
                                     <h4 class="member-name mb-1">
                                         <a href="#">{{$employee->name}}</a>
                                     </h4>
-                                    <span class="designation">{{$employee->jop_type}}</span>
+                                    <span class="designation">{{$employee->job_type}}</span>
                                     <span class="designation">{{$employee->phone}}</span>
                                     <span class="designation">{{$employee->whatsapp}}</span>
                                     <span class="designation">{{$employee->email}}</span>

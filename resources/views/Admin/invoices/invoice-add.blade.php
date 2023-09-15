@@ -120,7 +120,7 @@
                                             <label class="required fw-bold fs-6 mb-2">{{__('lang.sizes')}} </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <select class="form-control" name="size_id" id="sizes" >
+                                            <select class="form-control" name="size_id" id="sizes" required>
                                                 <option value="">{{__('lang.chooseSize')}}</option>
                                             </select>
                                             <!--end::Input-->
@@ -160,6 +160,7 @@
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <input type="number" name="quantity"
+                                                   required
                                                    class="form-control form-control-solid mb-3 mb-lg-0 quantity"
                                                    placeholder="{{__('lang.quantity')}}" id="quantity" />
                                             <!--end::Input-->

@@ -122,9 +122,11 @@ class ProjectsController extends Controller
         $project->image=$request->image;
         if($request->client_id){
             $project->client_id=$request->client_id;
-
         }
-        $project->image=$request->image;
+        $project->fa=$request->fa;
+        $project->pl=$request->pl;
+        $project->ff=$request->ff;
+        $project->sv=$request->sv;
         $project->save();
 
         return redirect(route($this->route . '.website','sales'))->with('message', trans('lang.added_s'));
@@ -183,6 +185,11 @@ class ProjectsController extends Controller
             $project->client_id=$request->client_id;
 
         }
+        $project->fa=$request->fa;
+        $project->pl=$request->pl;
+        $project->ff=$request->ff;
+        $project->sv=$request->sv;
+
         if (isset($request->image)) {
             $img_name = 'slider_' . time() . random_int(0000, 9999) . '.' . $data['image']->getClientOriginalExtension();
             $data['image']->move(public_path('/uploads/projects/'), $img_name);
@@ -192,7 +199,7 @@ class ProjectsController extends Controller
         $project->update();
 
 
-        return redirect(route($this->route . '.index'))->with('message', trans('lang.updated_s'));
+        return redirect(route($this->route . '.website',$request->type))->with('message', trans('lang.updated_s'));
     }
 
     /**

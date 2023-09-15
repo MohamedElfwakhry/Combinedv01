@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\EmployeesInvoiceRequest;
 use App\Models\EmployeesInvoice;
 use App\Models\ProjectFile;
 use App\Models\ProjectImage;
@@ -57,7 +58,7 @@ class EmployeesInvoicesController extends Controller
             })
             ->editColumn('file', function ($row) {
                 $name = '';
-                $name .= ' <a href="' . $row->invoice_image . '" class="btn btn-active-light-info"><i class="bi bi-pencil-fill"></i> اعرض الملف </a>';
+                $name .= ' <a href="' .$row->invoice_image . '" class="btn btn-active-light-info" target="_blank"><i class="bi bi-pencil-fill"></i> اعرض الملف </a>';
                 return $name;
             })
             ->addColumn('actions', function ($row) {
@@ -78,21 +79,22 @@ class EmployeesInvoicesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(EmployeesInvoice $request)
+    public function store(EmployeesInvoiceRequest $request)
     {
         $data = $request->validated();
 
 
-        $projectFile = new ProjectFile();
-        $projectFile->name = $request->name;
+        $projectFile = new EmployeesInvoice();
+        $projectFile->date = $request->date;
+        $projectFile->project_name = $request->project_name;
         $projectFile->price = $request->price;
-        $projectFile->rev = $request->rev;
-        $projectFile->file = $request->file;
-        $projectFile->project_id = $request->project_id;
-        $projectFile->category_id = $request->category_id;
+        $projectFile->invoice_image = $request->invoice_image;
+        $projectFile->type = $request->type;
+        $projectFile->employee_id = $request->employee_id;
+        $projectFile->notes = $request->notes;
         $projectFile->save();
 
-        return redirect(route($this->route . '.index',$request->project_id))->with('message', trans('lang.added_s'));
+        return redirect(route($this->route . '.index',$request->employee_id))->with('message', trans('lang.added_s'));
 
 
 

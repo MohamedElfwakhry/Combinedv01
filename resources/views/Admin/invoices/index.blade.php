@@ -14,7 +14,7 @@
                 {{trans('lang.Dashboard')}} </a>
         </li>
         <li class="breadcrumb-item">
-            {{trans('lang.'.$route)}}
+            {{trans('invoice.'.$route)}}
         </li>
     </ul>
     <!--end::Breadcrumb-->

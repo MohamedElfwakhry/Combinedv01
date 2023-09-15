@@ -30,5 +30,7 @@ return [
     'terms' => 'Terms And Conditions',
     'anotherDetailsForInvoice' => 'Another Details For Invoice',
     'invoices' => 'Invoices',
+    'cash' => 'Cash',
+
 
 ];

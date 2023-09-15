@@ -55,7 +55,7 @@ class EmployeesController extends Controller
             })
             ->editColumn('type', function ($row) {
                 $name = '';
-                $name .= ' <span class="text-gray-800 text-hover-primary mb-1">' . trans($row->type ) . '</span>';
+                $name .= ' <span class="text-gray-800 text-hover-primary mb-1">' . $row->type . '</span>';
                 return $name;
             })
 

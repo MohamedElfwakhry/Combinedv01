@@ -89,7 +89,7 @@ Route::group(['middleware' => ['auth','localeSessionRedirect', 'localizationRedi
         Route::get('/get-products-category/{category}', [ProductsController::class, 'productCategory'])->name('.productCategory');
         Route::get('/datatable', [ProductsController::class, 'datatable'])->name('.datatable');
         Route::post('/store', [ProductsController::class, 'store'])->name('.store');
-        Route::get('/edit/{id}', [ProductsController::class, 'edit'])->name('.edit');
+        Route::get('/edit/{type}/{id}', [ProductsController::class, 'edit'])->name('.edit');
         Route::post('/update/{id}', [ProductsController::class, 'update'])->name('.update');
         Route::get('delete', [ProductsController::class, 'destroy'])->name('.delete');
         Route::get('/add-button', [ProductsController::class, 'table_buttons'])->name('.table_buttons');
@@ -187,8 +187,10 @@ Route::group(
     })->middleware('loginPage')->name('login');
     Route::get('/', [FrontController::class,'index']);
 
-    Route::get('/team', function () {
-        return view('website.team');
+    Route::get('/team/{id}', function ($id) {
+        $employee = \App\Models\Employee::findOrFail($id);
+        $settings = \App\Models\Setting::findOrFail(1);
+        return view('website.team',compact(['employee','settings']));
     });
 
     Route::get('/project-details/{id}',[FrontController::class,'projectDetails'])->name('projectDetails');

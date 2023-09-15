@@ -421,15 +421,15 @@
                 <div class="col-lg-12">
                     <div class="swiper-container team-member-slider nav-pagination_wrap circle-arrow with-bg_white arrow-radius">
                         <div class="swiper-wrapper">
-                            @inject('Employees','App\Models\Client')
-                            @foreach($Employees->all() as $employee)
+                            @inject('Employees','App\Models\Employee')
+                            @foreach($Employees->where('type','website')->get() as $employee)
                                 <div class="swiper-slide">
                                     <div class="team-member">
                                         <div class="team-member-content pt-4">
                                             <h4 class="member-name mb-1">
                                                 <a href="{{url('/team/'. $employee->id)}}">{{$employee->name}}</a>
                                             </h4>
-                                            <span class="designation">{{$employee->type}}</span>
+                                            <span class="designation">{{$employee->job_type}}</span>
                                         </div>
                                     </div>
                                 </div>

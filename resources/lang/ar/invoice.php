@@ -30,4 +30,5 @@ return [
     'terms' => 'الشروط والاحكام',
     'anotherDetailsForInvoice' => 'بيانات اخرى للفاتورة',
     'invoices' => 'فواتير',
+    'cash' => 'كاش',
 ];

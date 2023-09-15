@@ -27,7 +27,6 @@ class EmployeesInvoiceRequest extends FormRequest
             //
             'date' => ['nullable', 'date'],
             'project_name' => ['nullable', 'string', 'min:1', 'max:255'],
-            'invoice_image' => ['nullable', 'string', 'min:1', 'max:255'],
             'price' => ['required', 'string', 'min:1', 'max:255'],
             'type' => ['required', 'string', 'in:income,outcome'],
             'employee_id' => ['required', 'exists:employees,id'],

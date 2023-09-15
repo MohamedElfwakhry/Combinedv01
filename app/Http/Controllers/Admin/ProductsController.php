@@ -90,7 +90,7 @@ class ProductsController extends Controller
                 return $name;
             })
             ->addColumn('actions', function ($row) {
-                $actions = ' <a href="' . url($this->route."/edit/" . $row->id) . '" class="btn btn-active-light-info"><i class="bi bi-pencil-fill"></i> تعديل </a>';
+                $actions = ' <a href="' . url($this->route."/edit/". $row->type.'/'. $row->id) . '" class="btn btn-active-light-info"><i class="bi bi-pencil-fill"></i> تعديل </a>';
                 return $actions;
 
             })
@@ -150,10 +150,11 @@ class ProductsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($type,$id)
     {
         $data = $this->objectName::findOrFail($id);
-        return view($this->viewPath . '.edit', compact('data'));
+
+        return view($this->viewPath . '.edit', compact(['data','type']));
     }
 
     /**
